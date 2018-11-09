@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 apt-get update
-apt-get install nginx-core
-
+apt-get install nginx
+./start.sh
