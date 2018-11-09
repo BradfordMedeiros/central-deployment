@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-touch install_called
+apt-get update
+apt-get install nginx
+
