@@ -10,8 +10,12 @@ echo "creating firewall rule to allow-irc"
 gcloud compute firewall-rules create allow-irc --allow tcp:6667 --target-tags=irc-server
 echo "created firewall rule"
 
-echo "allowing http traffic to server"
-gcloud compute instances add-tags test-instance --tags http-server,irc-server
+echo "creating firewall rule to allow-hippo"
+gcloud compute firewall-rules create allow-hippo --allow tcp:8000 --target-tags=hippo-server
+echo "created firewall rule"
+
+echo "allowing http, hippo traffic to server"
+gcloud compute instances add-tags test-instance --tags http-server,irc-server,hippo-server
 
 echo "uploading code"
 ./put-code.sh

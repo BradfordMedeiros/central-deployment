@@ -7,4 +7,4 @@ nginx -c $(pwd)/nginx.conf
 
 # Start IRC server
 docker run  --name inspircd -p 6667:6667 -e "INSP_NET_NAME=Smugs_Server" -v $(pwd)/conf:/inspircd/conf -d inspircd/inspircd-docker 
-	
+docker run -p 8000:8000 -d bradfordmedeiros/hippo:0.1

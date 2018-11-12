@@ -10,5 +10,6 @@ apt-get install -y docker-ce
 apt-get -y install nginx
 
 chmod 777 /var/run/docker.sock 
+chown -R 10000 ./conf
 
 ./start.sh
