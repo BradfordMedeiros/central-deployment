@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hippo-deployment
+  labels:
+    app: hippo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hippo
+  template:
+    metadata:
+      labels:
+        app: hippo
+    spec: 
+      containers:
+      - name: hippo
+        image: bradfordmedeiros/hippo:0.1
+        ports:
+        - containerPort: 8000 
