@@ -5,7 +5,7 @@ metadata:
   labels: 
     app: hippo
 spec:
-  type: ClusterIP
+  type: NodePort
   ports:
   - name: hippo
     port: 8000
