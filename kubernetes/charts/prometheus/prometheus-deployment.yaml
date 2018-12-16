@@ -16,8 +16,16 @@ spec:
     spec: 
       containers:
       - name: prometheus
-        image: prom/prometheus:v2.5.0 
+        image: prom/prometheus:v2.5.0
+        readinessProbe:
+            httpGet:
+              path: /monitoring/graph
+              port: 9090
         ports:
         - containerPort: 9090
-      #args:
-      #- '--web.page-title="Prometheus Time Series Collection and Processing Server"' 
+        args:
+        - --config.file
+        - /etc/prometheus/prometheus.yml
+        - --web.external-url
+        - /monitoring
+

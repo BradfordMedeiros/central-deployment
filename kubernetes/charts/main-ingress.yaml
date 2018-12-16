@@ -2,10 +2,16 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: main-ingress
+  annotations:
+    ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
   - http: 
       paths: 
+      - path: /monitoring/*
+        backend: 
+          serviceName: prometheus-service
+          servicePort: 9090
       - path: /*
         backend: 
           serviceName: hippo-service
