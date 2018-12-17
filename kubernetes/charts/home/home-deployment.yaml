@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: home-deployment
+  labels:
+    app: home
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: home
+  template:
+    metadata:
+      labels:
+        app: home
+    spec: 
+      containers:
+      - name: home
+        image: bradfordmedeiros/nodogma-home:0.1
+        ports:
+        - containerPort: 80
