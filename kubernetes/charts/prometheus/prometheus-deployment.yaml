@@ -28,4 +28,11 @@ spec:
         - /etc/prometheus/prometheus.yml
         - --web.external-url
         - /monitoring
-
+        volumeMounts:
+        - mountPath: /etc/prometheus/prometheus.yml
+          name: prometheus-config
+          subPath: config
+      volumes:
+      - name: prometheus-config
+        configMap:
+          name: prom-configmap
