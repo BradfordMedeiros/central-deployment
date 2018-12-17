@@ -19,3 +19,13 @@ spec:
         image: bradfordmedeiros/nodogma-home:0.1
         ports:
         - containerPort: 80
+        volumeMounts:
+        - mountPath: /usr/share/nginx/html/redirects.js
+          name: home-config
+          subPath: config
+      volumes:
+      - name: home-config
+        configMap:
+          name: home-redirect-configmap
+
+

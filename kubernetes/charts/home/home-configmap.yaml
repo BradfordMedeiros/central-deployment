@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: home-redirect-configmap
+data:
+  config: |
+    const redirectHippo = function(){
+      window.location = 'hippo/'
+    }
+    const redirectMonitoring = function(){
+      window.location = 'monitoring/'
+    }
+
