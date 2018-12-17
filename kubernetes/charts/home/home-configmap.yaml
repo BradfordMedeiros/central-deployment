@@ -8,6 +8,6 @@ data:
       window.location = 'hippo/'
     }
     const redirectMonitoring = function(){
-      window.location = 'monitoring/'
+      window.location = 'monitoring/graph'
     }
 
