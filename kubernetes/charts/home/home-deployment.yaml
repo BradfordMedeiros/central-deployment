@@ -16,7 +16,11 @@ spec:
     spec: 
       containers:
       - name: home
-        image: bradfordmedeiros/nodogma-home:0.1
+        image: bradfordmedeiros/nodogma-home:0.2
+        lifecycle:
+          postStart:
+            exec:
+              command: ["/bin/sh", "-c", "curl https://gist.githubusercontent.com/BradfordMedeiros/15bf84fc7dcb1cf4119c188f41bf9461/raw/bd4ddf8beb918ff52054299610d0edcca4fef396/gistfile1.txt > /usr/share/nginx/html/extra-style.css"]
         ports:
         - containerPort: 80
         volumeMounts:
