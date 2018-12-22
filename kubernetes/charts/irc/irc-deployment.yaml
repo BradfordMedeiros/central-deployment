@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: irc-deployment
+  labels: 
+    app: irc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: irc
+  template:
+    metadata:
+      labels:
+        app: irc
+    spec:
+      containers:
+      - name: irc
+        image: inspircd/inspircd-docker
+        ports:
+        - containerPort: 8000
