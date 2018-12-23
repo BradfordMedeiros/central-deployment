@@ -20,3 +20,8 @@ spec:
         backend:
           serviceName: home-service
           servicePort: 8080
+    tcp:
+      port: 6667
+      backend:
+        serviceName: irc
+        servicePort: 6667

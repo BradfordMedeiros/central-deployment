@@ -11,4 +11,7 @@ kubectl apply -f ./charts/home/home-configmap.yaml
 kubectl apply -f ./charts/home/home-deployment.yaml
 kubectl apply -f ./charts/home/home-service.yaml
 
+kubectl apply -f ./charts/irc/irc-deployment.yaml
+kubectl apply -f ./charts/irc/irc-service.yaml
+
 kubectl apply -f ./charts/main-ingress.yaml

@@ -18,4 +18,4 @@ spec:
       - name: irc
         image: inspircd/inspircd-docker
         ports:
-        - containerPort: 8000
+        - containerPort: 6667
