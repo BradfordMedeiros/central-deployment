@@ -19,4 +19,4 @@ spec:
         image: bradfordmedeiros/hippo:0.5
         ports:
         - containerPort: 8000 
-        args: ["http://35.244.136.205/hippo", "/hippo"]
+        args: ["http://130.211.25.219/hippo", "/hippo"]
