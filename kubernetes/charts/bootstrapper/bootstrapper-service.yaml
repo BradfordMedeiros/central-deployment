@@ -8,7 +8,7 @@ spec:
   type: NodePort
   ports:
   - name: bootstrapper
-    port: 8000
-    targetPort: 8000
+    port: 8001
+    targetPort: 8001
   selector:
     app: bootstrapper
