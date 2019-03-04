@@ -16,7 +16,7 @@ spec:
         backend: 
           serviceName: hippo-service
           servicePort: 8000
-      - path: /bootstrapper
+      - path: /bootstrapper/*
         backend:
           serviceName: bootstrapper-service
           servicePort: 8001          
