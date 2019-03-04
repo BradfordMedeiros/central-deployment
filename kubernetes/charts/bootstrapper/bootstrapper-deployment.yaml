@@ -16,6 +16,6 @@ spec:
     spec: 
       containers:
       - name: bootstrapper
-        image: bradfordmedeiros/bootstrapper:0.1
+        image: bradfordmedeiros/bootstrapper:0.2
         ports:
         - containerPort: 8001
