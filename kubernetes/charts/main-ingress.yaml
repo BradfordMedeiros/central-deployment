@@ -8,14 +8,18 @@ spec:
   rules:
   - http: 
       paths: 
-      - path: /monitoring/*
-        backend: 
-          serviceName: prometheus-service
-          servicePort: 9090
+#      - path: /monitoring/*
+#        backend: 
+#          serviceName: prometheus-service
+#          servicePort: 9090
       - path: /hippo/*
         backend: 
           serviceName: hippo-service
           servicePort: 8000
+      - path: /banner
+        backend:
+          serviceName: bootstrapper-service
+          servicePort: 8001          
       - path: /*
         backend:
           serviceName: home-service
