@@ -19,3 +19,5 @@ spec:
         image: bradfordmedeiros/bootstrapper:0.2
         ports:
         - containerPort: 8001
+        args: ["./bootstrapper", "serve", "./data/topics", "/bootstrapper"]
+
