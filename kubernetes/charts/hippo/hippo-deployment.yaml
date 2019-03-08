@@ -16,7 +16,7 @@ spec:
     spec: 
       containers:
       - name: hippo
-        image: bradfordmedeiros/hippo:0.54
+        image: bradfordmedeiros/hippo:0.55
         ports:
         - containerPort: 8000 
         args: ["http://130.211.25.219/hippo", "/hippo"]
