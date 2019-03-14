@@ -12,15 +12,15 @@ spec:
 #        backend: 
 #          serviceName: prometheus-service
 #          servicePort: 9090
-      - path: /hippo
+      - path: /hippo/*
         backend: 
           serviceName: hippo-service
           servicePort: 8000
-      - path: /bootstrapper
+      - path: /bootstrapper/*
         backend:
           serviceName: bootstrapper-service
           servicePort: 8001          
-      - path: /
+      - path: /*
         backend:
           serviceName: home-service
           servicePort: 8080
