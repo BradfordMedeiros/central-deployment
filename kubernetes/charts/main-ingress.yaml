@@ -3,7 +3,8 @@ kind: Ingress
 metadata:
   name: main-ingress
   annotations:
-    ingress.kubernetes.io/rewrite-target: /
+     ingress.kubernetes.io/ssl-redirect: "false"
+
 spec:
   rules:
   - http: 
